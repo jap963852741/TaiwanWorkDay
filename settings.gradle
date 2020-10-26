@@ -1,0 +1,3 @@
+include ':TaiwanWorkDayLib'
+include ':app'
+rootProject.name = "TaiwanWorkDay"
