@@ -50,9 +50,20 @@ public class APIUtil {
         String[] string_list = api_text.split("[}]"+"[,]");
         try {
             /* 寫入Txt檔案 */
-            File writename = new File(".\\data\\data.txt"); // 相對路徑，如果沒有則要建立一個新的output。txt檔案
-            writename.createNewFile(); // 建立新檔案
-            BufferedWriter out = new BufferedWriter(new FileWriter(writename));
+            File file = new File(".\\data\\data.txt"); // 相對路徑，如果沒有則要建立一個新的output。txt檔案
+//            file.createNewFile(); // 建立新檔案
+            if(!file.exists())
+            {
+                file.getParentFile().mkdirs();
+                try {
+                    file.createNewFile();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+
+            BufferedWriter out = new BufferedWriter(new FileWriter(file));
             for (String data : string_list){
                 String string_data = data.replace("\"","")
                         .replace("[","")
