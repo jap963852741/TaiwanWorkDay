@@ -36,11 +36,10 @@ public class HolidayUtil {
             @Override
             public void run() {
                 try {
-                    getCaller();
                     String joinedPath = new File(".", "sdcard").toString();
                     joinedPath = new File(joinedPath, "data").toString();
                     joinedPath = new File(joinedPath, "data.txt").toString();
-                    System.out.println(joinedPath);
+//                    System.out.println(joinedPath);
                     File filename = new File(joinedPath); // 相對路徑，如果沒有則要建立一個新的output。txt檔案
                     InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
                     BufferedReader br = new BufferedReader(reader);
@@ -106,7 +105,7 @@ public class HolidayUtil {
     }
     public String get_description(){
         if (this.map_data != null && !this.map_data.isEmpty()){
-//            System.out.println(this.map_data);
+            System.out.println(this.map_data);
             if (this.map_data.get("description") == "") {
                 return "no description";
             }

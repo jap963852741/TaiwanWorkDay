@@ -54,7 +54,6 @@ public class APIUtil {
             joinedPath = new File(joinedPath, "data").toString();
             joinedPath = new File(joinedPath, "data.txt").toString();
             File file = new File(joinedPath); // 相對路徑，如果沒有則要建立一個新的output。txt檔案
-//            file.createNewFile(); // 建立新檔案
             if(!file.exists())
             {
                 file.getParentFile().mkdirs();
