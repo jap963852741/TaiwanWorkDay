@@ -15,16 +15,32 @@ public class HolidayUtil {
         this.date = date;
         Get_data(this.date);
     }
+
+    public static void getCaller() {
+        StackTraceElement[] stack = (new Throwable()).getStackTrace();
+        for (int i = 0; i < stack.length; i++) {
+            StackTraceElement ste = stack[i];
+            System.out.println(ste.getClassName() + "." + ste.getMethodName() + "(...);");
+            System.out.println(i + "--" + ste.getMethodName());
+            System.out.println(i + "--" + ste.getFileName());
+            System.out.println(i + "--" + ste.getLineNumber());
+            System.out.println("作業系統的名稱:"+System.getProperty("os.name"));
+            System.out.println("作業系統的架構:"+System.getProperty("os.arch"));
+            System.out.println("作業系統的版本:"+System.getProperty("os.version"));
+
+        }
+    }
     public void Get_data(final String date){
         this.map_data = new HashMap<String, String>();
         Thread GET_date_data = new Thread(new Runnable(){
             @Override
             public void run() {
                 try {
-                    String joinedPath = new File(".").getAbsolutePath();
-                    joinedPath = new File(joinedPath, "data").toString();
+                    getCaller();
+                    String joinedPath = new File(".", "sdcard").toString();
                     joinedPath = new File(joinedPath, "data").toString();
                     joinedPath = new File(joinedPath, "data.txt").toString();
+                    System.out.println(joinedPath);
                     File filename = new File(joinedPath); // 相對路徑，如果沒有則要建立一個新的output。txt檔案
                     InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
                     BufferedReader br = new BufferedReader(reader);
