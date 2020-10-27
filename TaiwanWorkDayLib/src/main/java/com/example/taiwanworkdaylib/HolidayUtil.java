@@ -22,6 +22,7 @@ public class HolidayUtil {
             public void run() {
                 try {
                     String joinedPath = new File(".", "data").toString();
+                    joinedPath = new File(joinedPath, "data").toString();
                     joinedPath = new File(joinedPath, "data.txt").toString();
                     File filename = new File(joinedPath); // 相對路徑，如果沒有則要建立一個新的output。txt檔案
                     InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
