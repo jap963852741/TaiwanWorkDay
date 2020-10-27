@@ -118,8 +118,8 @@ public class HolidayUtil {
     public String get_holiday_name(){
         if (this.map_data != null && !this.map_data.isEmpty()){
             System.out.println(this.map_data);
-            if (this.map_data.get("get_name") == "") {
-                return "no description";
+            if (this.map_data.get("name") == "") {
+                return "no name";
             }
             return this.map_data.get("get_name");
 
@@ -127,9 +127,9 @@ public class HolidayUtil {
         return "is not holiday";
     }
     public static void main(String[] args) {
-        HolidayUtil abc = new HolidayUtil();
-        abc.set_date("20201025");
-        System.out.println(abc.isHoliday());
+        HolidayUtil holidayutil = new HolidayUtil();
+        holidayutil.set_date("20210404");
+        System.out.println(holidayutil.get_holiday_name());
 
     }
 }
