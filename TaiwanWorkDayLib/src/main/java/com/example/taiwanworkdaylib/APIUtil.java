@@ -47,7 +47,7 @@ public class APIUtil {
     }
 
     public void save_date_txt(String api_text){
-        String[] string_list = api_text.split("},");
+        String[] string_list = api_text.split("[}]"+"[,]");
         try {
             /* 寫入Txt檔案 */
             File writename = new File(".\\data\\data.txt"); // 相對路徑，如果沒有則要建立一個新的output。txt檔案

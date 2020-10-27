@@ -99,8 +99,8 @@ public class HolidayUtil {
 
     public static void main(String[] args) {
         HolidayUtil abc = new HolidayUtil();
-        abc.set_date("20210411");
-        System.out.println(abc.get_description());
+        abc.set_date("20201025");
+        System.out.println(abc.isHoliday());
 
     }
 }
