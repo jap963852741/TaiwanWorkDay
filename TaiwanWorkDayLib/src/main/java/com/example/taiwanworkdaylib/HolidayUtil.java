@@ -121,7 +121,7 @@ public class HolidayUtil {
             if (this.map_data.get("name") == "") {
                 return "no name";
             }
-            return this.map_data.get("get_name");
+            return this.map_data.get("name");
 
         }
         return "is not holiday";
@@ -129,7 +129,7 @@ public class HolidayUtil {
     public static void main(String[] args) {
         HolidayUtil holidayutil = new HolidayUtil();
         holidayutil.set_date("20210404");
-        System.out.println(holidayutil.get_holiday_name());
+        System.out.println(holidayutil.get_description());
 
     }
 }
