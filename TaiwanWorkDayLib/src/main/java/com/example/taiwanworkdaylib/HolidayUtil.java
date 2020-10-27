@@ -21,8 +21,9 @@ public class HolidayUtil {
             @Override
             public void run() {
                 try {
-                    String pathname = ".\\data\\data.txt";
-                    File filename = new File(pathname);
+                    String joinedPath = new File(".", "data").toString();
+                    joinedPath = new File(joinedPath, "data.txt").toString();
+                    File filename = new File(joinedPath); // 相對路徑，如果沒有則要建立一個新的output。txt檔案
                     InputStreamReader reader = new InputStreamReader(new FileInputStream(filename));
                     BufferedReader br = new BufferedReader(reader);
                     String line = "";
