@@ -80,12 +80,24 @@ public class APIUtil {
                     String key = temp_list[0];
                     String value = temp_list.length > 1 ? temp_list[1] : "";
                     if (key != null && value != null && key.equals("date")) {
-                        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-                        DateFormat df = DateFormat.getDateInstance();
-                        Date date = df.parse(value);
-                        Calendar calendar = Calendar.getInstance();
-                        calendar.setTime(date);
-                        value = sdf.format(calendar.getTime());
+//                        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+//                        DateFormat df = DateFormat.getDateInstance();
+//                        Date date = df.parse(value);
+//                        Calendar calendar = Calendar.getInstance();
+//                        calendar.setTime(date);
+//                        value = sdf.format(calendar.getTime());
+                        String[] split_dates = value.split("[/]");
+                        String year = split_dates[0];
+                        String month = split_dates[1];
+                        String day = split_dates[2];
+                        if(month.length() < 2){
+                            month = "0"+month;
+                        }
+                        if(day.length() < 2){
+                            day = "0"+day;
+                        }
+                        value = year+month+day;
+
                         final_string_data += key+":"+value+",";
                     }else if(key != null && value != null && key.equals("description")) {
                         final_string_data += key+":"+value+"";
