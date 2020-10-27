@@ -115,7 +115,17 @@ public class HolidayUtil {
         return "no description";
     }
 
+    public String get_holiday_name(){
+        if (this.map_data != null && !this.map_data.isEmpty()){
+            System.out.println(this.map_data);
+            if (this.map_data.get("get_name") == "") {
+                return "no description";
+            }
+            return this.map_data.get("get_name");
 
+        }
+        return "is not holiday";
+    }
     public static void main(String[] args) {
         HolidayUtil abc = new HolidayUtil();
         abc.set_date("20201025");
