@@ -44,4 +44,3 @@
 <br></br><br></br>
 
 <Strong>如果覺得不錯的話，麻煩幫我點個星星，非常感謝^^</Strong>
-<meta name="google-site-verification" content="LwY3vEqiHoxx-aLGGcW4IECdFgBcDPxaOqcshW8NeJY" />
