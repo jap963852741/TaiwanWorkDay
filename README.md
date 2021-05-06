@@ -4,11 +4,11 @@
 [政府行政機關辦公日曆表 - 政府資料開放平台](https://data.gov.tw/dataset/26557)
 
 資料範圍 : 
-2013/1/1 - 2021/4/24 <br>
+2013/1/1 - 2021/12/31 <br>
 更新日期 : (2020/10/27)
 </br>
 ## Install
->>  implementation 'com.github.jap963852741:TaiwanWorkDay:v1.1.10'
+>>  implementation 'com.github.jap963852741:TaiwanWorkDay:v1.1.11'
 
 
 ## Usage
