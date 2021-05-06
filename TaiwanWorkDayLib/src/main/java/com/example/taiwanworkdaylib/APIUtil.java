@@ -21,7 +21,7 @@ public class APIUtil {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("https://data.ntpc.gov.tw/api/datasets/308DCD75-6434-45BC-A95F-584DA4FED251/json?page=0&size=10000");
+                    URL url = new URL("https://data.ntpc.gov.tw/api/datasets/308DCD75-6434-45BC-A95F-584DA4FED251/json?page=1&size=10000");
                     URLConnection connection = url.openConnection();
                     InputStream in = connection.getInputStream();
                     InputStreamReader isr = new InputStreamReader(in,"utf-8");
